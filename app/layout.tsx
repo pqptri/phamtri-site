@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Tri Pham",
   description: "Personal Academic Website",
   icons: {
-    icon: "/avatar.jpg",
+    icon: "/avatar.png",
   },
 };
 
