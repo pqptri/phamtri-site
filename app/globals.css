@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* =========================
+   DESIGN TOKENS
+========================= */
 :root {
   --background: #f7f8f8;
   --foreground: #000000;
@@ -7,29 +10,113 @@
   --primary: #0e9b8c;
   --primary-dark: #107267;
   --accent-red: #e5465f;
-  --black: #000000;
 
   --muted: #5f6b6a;
-  --card: rgba(255, 255, 255, 0.78);
+  --card: rgba(255, 255, 255, 0.88);
+  --card-solid: #ffffff;
   --border: rgba(16, 114, 103, 0.14);
 
+  --hero-bg-1: rgba(74, 218, 192, 0.12);
+  --hero-bg-2: rgba(14, 155, 140, 0.08);
+  --hero-bg-3: rgba(229, 70, 95, 0.10);
+
+  --selection: rgba(14, 155, 140, 0.22);
+
   --gradient-main: linear-gradient(90deg, #4adac0, #000000);
+}
+
+/* =========================
+   RESET
+========================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* =========================
+   BASE
+========================= */
 body {
   background:
-    radial-gradient(circle at top left, rgba(74, 218, 192, 0.12), transparent 28%),
-    radial-gradient(circle at top right, rgba(14, 155, 140, 0.08), transparent 24%),
+    radial-gradient(circle at top left, var(--hero-bg-1), transparent 28%),
+    radial-gradient(circle at top right, var(--hero-bg-2), transparent 24%),
     var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
 }
 
 ::selection {
-  background: rgba(14, 155, 140, 0.22);
-  color: #000000;
+  background: var(--selection);
+  color: var(--foreground);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+/* =========================
+   UTILITIES
+========================= */
+.text-muted {
+  color: var(--muted);
+}
+
+.text-primary {
+  color: var(--primary);
+}
+
+.text-primary-dark {
+  color: var(--primary-dark);
+}
+
+.text-accent {
+  color: var(--accent-red);
+}
+
+.border-theme {
+  border-color: var(--border);
+}
+
+.bg-card {
+  background: var(--card);
+}
+
+.bg-card-solid {
+  background: var(--card-solid);
+}
+
+.gradient-main {
+  background: var(--gradient-main);
+}
+
+.section-shell {
+  width: 100%;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .section-shell {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
 }
