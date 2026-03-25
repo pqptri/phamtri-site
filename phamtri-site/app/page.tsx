@@ -348,7 +348,10 @@ export default function Home() {
               <li>Commerce / Finance</li>
               <li>Philosophy</li>
               <li>Technology</li>
-              <li>Future coursework placeholder for economics, markets, ethics, and systems thinking</li>
+              <li>
+                Future coursework placeholder for economics, markets, ethics,
+                and systems thinking
+              </li>
             </ul>
           </div>
         </div>
@@ -644,7 +647,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
 
       <footer className="border-t border-white/10">
         <div className="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-8 text-sm text-slate-400 md:flex-row md:items-center md:justify-between md:px-10">
